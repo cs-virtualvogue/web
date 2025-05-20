@@ -1,277 +1,173 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8"></meta>
-  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
-     <title>About Us - Virtual Vogue | ชุดเดรสสายฝอ ชุดออกงาน ชุดปาร์ตี้</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&amp;display=swap" rel="stylesheet"></link>
+  <meta charset="UTF-8"></meta>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+  <title>เกี่ยวกับเรา - VIRTUAL VOGUE BLOG</title>
 
-    <style>
-        body {
-            font-family: 'Prompt', sans-serif; /* ใช้ฟอนต์ Prompt */
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
+  <!-- ฟอนต์ Prompt -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&amp;display=swap" rel="stylesheet"></link>
 
-        header {
-            background-color: #a00080; /* สีม่วงเข้มตาม h2 ของคุณ */
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-        }
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></link>
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #6a006a; /* สีเข้มขึ้น */
-            padding: 0.8em 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a {
-            color: #fff;
-            padding: 0.8em 1.5em;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #990099; /* สีเมื่อ hover */
-        }
-
-        main {
-            max-width: 1000px; /* เพิ่ม max-width ให้เนื้อหา */
-            margin: 20px auto; /* จัดกึ่งกลาง */
-            padding: 0 20px; /* เพิ่ม padding ด้านข้าง */
-        }
-
-        h2 {
-            text-align: center;
-            color: #a00080; /* สีม่วงเข้ม */
-            padding: 20px 0;
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .about-section {
-            display: flex;
-            flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อหน้าจอเล็ก */
-            align-items: flex-start;
-            margin-bottom: 40px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .about-logo {
-            flex: 1;
-            text-align: center;
-            padding-right: 30px;
-            min-width: 250px; /* กำหนดขั้นต่ำเพื่อไม่ให้โลโก้เล็กเกินไป */
-        }
-
-        .about-logo img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .about-content {
-            flex: 2;
-            font-size: 1.1em;
-            line-height: 1.7;
-        }
-
-        .about-content p {
-            margin-bottom: 15px;
-        }
-
-        .about-content strong {
-            color: #6a006a; /* สีเดียวกับ nav */
-            font-weight: 700;
-        }
-
-        .blog-button {
-            display: inline-block;
-            padding: 8px 18px;
-            background: linear-gradient(135deg, #d946ef, #9333ea, #6366f1);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9em;
-            border-radius: 25px;
-            box-shadow: 0 4px 12px rgba(147, 51, 234, 0.4);
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .blog-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(147, 51, 234, 0.6);
-        }
-
-        .contact-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-            margin-top: 40px;
-            text-align: center;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .qr-section, .shop-buttons-section {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        .qr-img {
-            max-width: 200px;
-            height: auto;
-            border: 5px solid #eee;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-
-        .shop-btn {
-            max-width: 250px;
-            height: auto;
-            margin-bottom: 15px;
-            transition: transform 0.2s ease, filter 0.2s ease;
-            filter: grayscale(80%); /* เพิ่ม grayscale เริ่มต้น */
-        }
-
-        .shop-btn:hover {
-            transform: translateY(-5px);
-            filter: grayscale(0%); /* เอา grayscale ออกเมื่อ hover */
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .about-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-logo {
-                padding-right: 0;
-                margin-bottom: 20px;
-            }
-
-            .contact-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav {
-                flex-direction: column;
-            }
-
-            nav a {
-                width: 100%;
-                text-align: center;
-                padding: 0.6em 0;
-            }
-        }
-    </style>
+  <style>
+    body {
+      font-family: Prompt;
+      background-color: #fff;
+      color: #000;
+    }
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-weight: 600;
+    }
+    .brand-img {
+      max-width: 100%;
+      height: auto;
+    }
+    .qr-img {
+      max-width: 150px;
+      height: auto;
+    }
+    .shop-btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  </style>
+<style>
+    .grayscale {
+      filter: grayscale(100%);
+    }
+  </style>
 </head>
+<nav>
+    <a href="http://virtualvogue.lnwshop.com/showroom/new">NEW ITEMS</a>
+    <a href="http://virtualvogue.lnwshop.com/category">DRESSES</a>
+    <a href="about">เกี่ยวกับเรา</a>
+    <a href="http://virtualvogue.lnwshop.com/contactus">ติดต่อเรา</a>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: #6a006a; /* สีพื้นหลังแถบนำทาง */
+        padding: 0.8em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        flex-wrap: wrap; /* ให้เมนูขึ้นบรรทัดใหม่ได้เมื่อหน้าจอเล็ก */
+    }
+
+    nav a {
+        color: #fff;
+        padding: 0.8em 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: background-color 0.3s ease, transform 0.2s ease; /* เพิ่ม transform ใน transition */
+        position: relative; /* สำหรับ underline effect */
+        overflow: hidden; /* ซ่อนส่วนเกินของ underline */
+    }
+
+    nav a:hover {
+        background-color: #990099; /* สีเมื่อ hover */
+        transform: translateY(-2px); /* ยกขึ้นเล็กน้อยเมื่อ hover */
+    }
+
+    /* เพิ่ม effect underline เมื่อ hover */
+    nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #ffcc00; /* สีของ underline */
+        transform: translateX(-100%); /* ซ่อนไว้ทางซ้ายเริ่มต้น */
+        transition: transform 0.3s ease-out;
+    }
+
+    nav a:hover::after {
+        transform: translateX(0); /* เลื่อนเข้ามาเมื่อ hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column; /* เปลี่ยนเป็นแนวตั้งเมื่อหน้าจอเล็ก */
+        }
+
+        nav a {
+            width: 100%; /* ให้ลิงก์เต็มความกว้าง */
+            text-align: center;
+            padding: 0.6em 0;
+        }
+    }
+</style>
 <body>
-    <header>
-        <h1>About Us - VIRTUAL VOGUE</h1>
-    </header>
+  <div class="container">
+    <br />
+    <h1 style="font-family: Prompt;">💜 About Us – รู้จัก Blog Virtual Vogue</h1>
 
-    <nav>
-        <a href="http://virtualvogue.lnwshop.com/showroom/new">NEW ITEMS</a>
-        <a href="http://virtualvogue.lnwshop.com/category">DRESSES</a>
-        <a href="about.html">เกี่ยวกับเรา</a>
-        <a href="http://virtualvogue.lnwshop.com/contactus">ติดต่อเรา</a>
-    </nav>
-    
-    <main>
-        <h2>💜 About Us – รู้จัก Blog Virtual Vogue</h2>
+    <div class="row align-items-start">
+      <!-- โลโก้ -->
+      <div class="col-md-4 text-center mb-4">
+                  <a href="http://virtualvogue.lnwshop.com/" target="_blank">
+        <img alt="Virtual Vogue Logo" class="brand-img mb-4" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoj0tuCVxkPSZw_pUMwyehIx_Gu54NXVhhYu-o9LQz5hlSHoMe3rmJzQX__qG3Vp0D2L5DRh9pcusSgc8NasEN00LmLrZ24Ed24TeiUVR1ylVk9z5HjkKqdZPl38Q-w0nsA5aM_IdwdTkvK5u6C4rdKy_RrPwzbRP9gKTdK3mNdsabzQ/s1600/VIRTUALVOGUE.png" />
+</a>
+      </div>
 
-        <div class="about-section">
-          <div class="about-logo">
-            <a href="http://virtualvogue.lnwshop.com/" target="_blank">
-              <img alt="Virtual Vogue Logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoj0tuCVxkPSZw_pUMwyehIx_Gu54NXVhhYu-o9LQz5hlSHoMe3rmJzQX__qG3Vp0D2L5DRh9pcusSgc8NasEN00LmLrZ24Ed24TeiUVR1ylVk9z5HjkKqdZPl38Q-w0nsA5aM_IdwdTkvK5u6C4rdKy_RrPwzbRP9gKTdK3mNdsabzQ/s1600/VIRTUALVOGUE.png" />
-            </a>
-          </div>
+      <!-- ข้อมูลร้าน -->
+      <div class="col-md-8">
+        <p>
+          <strong style="font-family: Prompt;">VIRTUAL VOGUE | BLOG</strong><br />
+          <p style="font-family: Prompt;">คือจุดหมายปลายทางของคนรักแฟชั่นที่ไม่ยอมตามกระแส แต่ “สร้างกระแส” ด้วยตัวเอง
+เราเชื่อว่าแฟชั่นไม่ใช่แค่สิ่งที่คุณใส่ แต่คือ วิธีที่คุณเล่าเรื่องราวของตัวเอง
 
-          <div class="about-content">
-            <p>
-              <strong>VIRTUAL VOGUE | BLOG</strong><br />
-              คือจุดหมายปลายทางของคนรักแฟชั่นที่ไม่ยอมตามกระแส แต่ “สร้างกระแส” ด้วยตัวเอง
-              เราเชื่อว่าแฟชั่นไม่ใช่แค่สิ่งที่คุณใส่ แต่คือวิธีที่คุณเล่าเรื่องราวของตัวเอง
-            </p>
-            <p>
-              ที่นี่เรารวมเทรนด์สายฝอระดับโลก ทั้งลุคหรูหราแบบมีชั้นเชิง ไปจนถึงสตรีทแฟชั่นสุดจัดจ้าน
-              ออกแบบมาเพื่อทั้งผู้ชายและผู้หญิงที่กล้าแตกต่าง และชอบความ “สับ” แบบมีรสนิยม
-              เรานำเสนอแรงบันดาลใจแฟชั่นที่ใช้งานได้จริง พร้อมอัปเดตลุคจากแฟชั่นนิสต้า, อินฟลูเอนเซอร์ระดับโลก และไอเทมที่ควรมีติดตู้
-            </p>
-            <p>
-              <strong>👙 แฟชั่นของเรา ไม่ได้จำกัดที่เพศ แต่ขับเน้นที่ความมั่นใจ</strong><br />
-              VIRTUAL VOGUE ไม่ได้ขายแค่เสื้อผ้า เรานำเสนอไอเดีย, สไตล์, และวิธีแต่งตัวที่เปลี่ยนทุกวันธรรมดาให้ดูน่าสนใจ
-              เพราะเราเชื่อว่าสไตล์ที่แท้จริงเริ่มต้นจากความเป็นตัวของตัวเอง
-            </p>
-            <p>
-              <strong>👠 คุณพร้อมจะสับลุคใหม่ไปกับเราแล้วหรือยัง?</strong><br />
-              ติดตามคอนเทนต์แฟชั่น, รีวิวไอเทมมาแรง, และลุคเด็ดประจำซีซั่นได้ใน
-              <a href="https://pr-virtualvogue.blogspot.com/search/label/" target="_blank" rel="noopener noreferrer" class="blog-button">
-                ✨ Blog แฟชั่นสายฝอ
-              </a>
-              ของเรา หรือพบกับเราได้บนทุกแพลตฟอร์มโซเชียลมีเดีย! พร้อมอัปเกรดลุคของคุณให้สับแบบสายฝอแล้วใช่ไหม?
-              คุณสามารถเลือกชมและสั่งซื้อสินค้าแฟชั่นของเราได้ผ่านช่องทางด้านล่างนี้
-            </p>
-          </div>
-        </div>
+ที่นี่เรารวม เทรนด์สายฝอระดับโลก ทั้งลุคหรูหราแบบมีชั้นเชิง ไปจนถึง สตรีทแฟชั่นสุดจัดจ้าน
+ออกแบบมาเพื่อทั้งผู้ชายและผู้หญิงที่กล้าแตกต่าง และชอบความ “สับ” แบบมีรสนิยม
 
-        <div class="contact-section">
-          <div class="qr-section">
-            <h5>สอบถามเพิ่มเติมติดต่อ LINE</h5>
-            <img alt="QR Code" class="qr-img" src="https://qr-official.line.me/gs/M_686sajfu_BW.png?oat_content=qr" />
-          </div>
+เรานำเสนอแรงบันดาลใจแฟชั่นที่ใช้งานได้จริง พร้อมอัปเดตลุคจากแฟชั่นนิสต้า, อินฟลูเอนเซอร์ระดับโลก และไอเทมที่ควรมีติดตู้</p>
+<br />
+        <p>
+          <strong style="font-family: Prompt;"> 👙 แฟชั่นของเรา ไม่ได้จำกัดที่เพศ แต่ขับเน้นที่ความมั่นใจ</strong><br />
+          <p style="font-family: Prompt;">VIRTUAL VOGUE: ไม่ได้ขายแค่เสื้อผ้า เรานำเสนอไอเดีย, สไตล์, และวิธีแต่งตัวที่เปลี่ยนทุกวันธรรมดาให้ดูน่าสนใจ
+เพราะเราเชื่อว่า สไตล์ที่แท้จริง เริ่มต้นจากความเป็นตัวของตัวเอง
+        </p>
+        <p>
+          <strong style="font-family: Prompt;">👠 คุณพร้อมจะสับลุคใหม่ไปกับเราแล้วหรือยัง?</strong><br />
+        <p style="font-family: Prompt;">
+         ติดตามคอนเทนต์แฟชั่น, รีวิวไอเทมมาแรง, และลุคเด็ดประจำซีซั่นได้ใน <a href="https://pr-virtualvogue.blogspot.com/search/label/" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   style="display: inline-block; padding: 6px 14px; background: linear-gradient(135deg, #d946ef, #9333ea, #6366f1); color: white; text-decoration: none; font-weight: 600; font-size: 13px; border-radius: 20px; box-shadow: 0 3px 10px rgba(147, 51, 234, 0.35); transition: all 0.3s ease; transform: scale(1);"
+   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 14px rgba(147, 51, 234, 0.5)'"
+   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 3px 10px rgba(147, 51, 234, 0.35)'"
+   onmousedown="this.style.transform='scale(0.97)'"
+   onmouseup="this.style.transform='scale(1.05)'">
+    ✨ Blog แฟชั่นสายฝอ
+</a> ของเรา หรือพบกับเราได้บนทุกแพลตฟอร์มโซเชียลมีเดีย! พร้อมอัปเกรดลุคของคุณให้สับแบบสายฝอแล้วใช่ไหม?
+คุณสามารถเลือกชมและสั่งซื้อสินค้าแฟชั่นของเราได้ผ่านช่องทางด้านล่างนี้
+        </p>
+      </div>
+    </div>
 
-          <div class="shop-buttons-section">
-            <a href="https://shop.line.me/@686sajfu" rel="noopener noreferrer" target="_blank">
-              <img alt="สั่งซื้อผ่าน LINE" class="shop-btn" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1mrAsf7PL2gb6Kcr8qIXJaZIR6D_tYd6ZRyBI5lDaj0lp7ig3TQiBOhAAjmV6g7WjMd1NhRCzDXXY9RshS7csNRlbLi7DoAAa0W7bLQdAUt_7o-TCK9mGzM54-onXwUm5-_KhuWz5AvtNs7gBeHWHjkpAjN8qlOaFkYdfPlMtXfwiqev55DGz7fj-uPw/s470/Line-e1635383161664.png" />
-            </a>
-            <a href="https://shopee.co.th/virtualvogue_cs" rel="noopener noreferrer" target="_blank">
-              <img alt="สั่งซื้อผ่าน Shopee" class="shop-btn" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-w51nBuq0XAPgFrnWqK4fNlsEzONpPLGMntb1BTGuhojEt-Ezka11cfez2rAc_9LmaaM0MQH5-9kXSQTbGR-k8GI4JSpyfadxKkhCXlKjZS64COcNLuFYE4Se_cy1JZ1VRevlZPB48NBJjqq2C0fzghyphenhyphen6KzsGOexy4ldPzaAgznhyphenhyphenYzjQvaEyay1pjWQ/s470/shopee-1-e1635383147243.png" />
-            </a>
-          </div>
-        </div>
-    </main>
+    <!-- QR และปุ่ม -->
+    <div class="row mt-5">
+      <div class="col-md-4 text-center mb-4">
+        <h5 style="font-family: Prompt;">สอบถามเพิ่มเติมติดต่อ LINE</h5>
+        <img alt="QR Code" class="qr-img" src="https://qr-official.line.me/gs/M_686sajfu_BW.png?oat_content=qr" />
+      </div>
 
-    <footer>
-        <p>&copy; 2025 VIRTUAL VOGUE. All rights reserved.</p>
-        <p><a href="http://virtualvogue.lnwshop.com/terms">Terms of Service</a> | <a href="http://virtualvogue.lnwshop.com/privacy">Privacy Policy</a></p>
-    </footer>
+      <div class="col-md-8 text-center d-flex flex-column align-items-center gap-3">
+        <a href="https://shop.line.me/@686sajfu" rel="noopener noreferrer" target="_blank">
+          <img alt="สั่งซื้อผ่าน LINE" class="shop-btn" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1mrAsf7PL2gb6Kcr8qIXJaZIR6D_tYd6ZRyBI5lDaj0lp7ig3TQiBOhAAjmV6g7WjMd1NhRCzDXXY9RshS7csNRlbLi7DoAAa0W7bLQdAUt_7o-TCK9mGzM54-onXwUm5-_KhuWz5AvtNs7gBeHWHjkpAjN8qlOaFkYdfPlMtXfwiqev55DGz7fj-uPw/s470/Line-e1635383161664.png" class="grayscale" />
+        </a>
+        <a href="https://shopee.co.th/virtualvogue_cs" rel="noopener noreferrer" target="_blank">
+          <img alt="สั่งซื้อผ่าน Shopee" class="shop-btn" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-w51nBuq0XAPgFrnWqK4fNlsEzONpPLGMntb1BTGuhojEt-Ezka11cfez2rAc_9LmaaM0MQH5-9kXSQTbGR-k8GI4JSpyfadxKkhCXlKjZS64COcNLuFYE4Se_cy1JZ1VRevlZPB48NBJjqq2C0fzghyphenhyphen6KzsGOexy4ldPzaAgznhyphenhyphenYzjQvaEyay1pjWQ/s470/shopee-1-e1635383147243.png" class="grayscale" />
+        </a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
